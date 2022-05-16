@@ -50,7 +50,9 @@
 
 	<context:component-scan
 		base-package="org.zerock.sample" />
-		
 	
+	<!-- p.202 -->	
+	<context:component-scan base-package="org.zerock.service">
+	</context:component-scan>
 
 </beans>

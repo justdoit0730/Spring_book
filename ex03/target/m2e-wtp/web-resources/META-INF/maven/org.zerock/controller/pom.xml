@@ -81,7 +81,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>runtime</scope>
+			<!-- <scope>runtime</scope> --> <!-- 주석처리 : log4j가 실행 될 때만 돌아가게 한다는 뜻 -->
 		</dependency>
 
 		<!-- @Inject -->

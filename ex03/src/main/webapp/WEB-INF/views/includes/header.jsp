@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!-- C태그 사용하려면 header에 꼭 써줘야 한다!	-->
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!-- fmt태그 사용하려면 header에 꼭 써줘야 한다!	-->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -37,10 +41,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <!-- C태그 사용하려면 header에 꼭 써줘야 한다!	-->
-    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-    <!-- fmt태그 사용하려면 header에 꼭 써줘야 한다!	-->
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+
+    <!-- jQuery -->
+    <script src="../resources/vendor/jquery/jquery.min.js"></script>
 </head>
 
 <body>

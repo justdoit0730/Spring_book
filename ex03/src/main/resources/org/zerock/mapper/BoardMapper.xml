@@ -39,7 +39,7 @@ PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
 			title = #{title},
 			content = #{content},
 			writer = #{writer},
-			updateDate = #{updateDate},
+			updateDate = sysdate
 		where bno = #{bno}
 	</update>
 	<!-- p.196 -->

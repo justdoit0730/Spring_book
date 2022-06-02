@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                         </div>
                                     </div>
                                     <!-- /.modal-content -->
@@ -105,6 +105,8 @@
             		var result = '<c:out value="${result}"/>';
             		
             		checkModel(result);
+            		
+            		history.replaceState({}, null, null);
             		
             		function checkModel(result){
             			if(result ==='' || history.state){

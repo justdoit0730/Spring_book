@@ -43,6 +43,20 @@ PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
 		where bno = #{bno}
 	</update>
 	<!-- p.196 -->
+	<!-- p.294 -->
+	<select id="getListWithPaging" resultType="org.zerock.domain.BoardVO">
+		<![CDATA[
+			select bno, title, content, writer, regdate, updatedate
+			from (
+					select rownum rn, bno, title, content, writer, regdate, updatedate
+					from tbl_board
+					where rownum <= #{pageNum} * #{amount}
+				 )
+			where rn > (#{pageNum) * #{amount}
+		]]>
+		<!-- CDATA : XML에서 사용할 수 없는 부등호를 사용하기 위함 -->
+	</select>
+	<!-- p.294 -->
 </mapper>
 
 

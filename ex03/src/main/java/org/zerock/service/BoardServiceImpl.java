@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
 import org.zerock.mapper.BoardMapper;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
+import oracle.net.aso.b;
 
 @Log4j
 @Service
@@ -42,13 +44,20 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.delete(bno)==1;
 	}
 
-	@Override
-	public List<BoardVO> getList() {
-//p.206쪽 
-		log.info("getList........");
-		return mapper.getList();
-	}
+//	@Override
+//	public List<BoardVO> getList() {
+////p.206쪽 
+//		log.info("getList........");
+//		return mapper.getList();
+//	}
 	
 //	@Setter(onMethod_ = @Autowired)
 //	private BoardMapper mapper;
+	
+	@Override
+	public List<BoardVO> getList(Criteria cri){
+		log.info("get List with criteria :" + cri);
+		
+		return mapper.getListWithPaging(cri);
+	}
 }

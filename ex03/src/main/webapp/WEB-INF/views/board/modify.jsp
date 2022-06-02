@@ -75,6 +75,7 @@
 $(document).ready(function(){
 	
 	var formObj = $("form");
+	
 	$('button').on("click", function(e){
 		
 		e.preventDefault();
@@ -87,8 +88,10 @@ $(document).ready(function(){
 			formObj.attr("action", "/board/remove");
 		}else if(operation === 'list'){
 			//move to list
-			self.location = "/board/list";
-			return;
+			formObj.attr("action","/board/list").attr("method","get");
+			formObj.empty();
+			
+			
 		}
 		formObj.submit();
 		

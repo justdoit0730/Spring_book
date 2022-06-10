@@ -93,24 +93,4 @@ public class BoardMapperTests {
 	}
 	
 	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
